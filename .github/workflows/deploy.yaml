@@ -1,0 +1,35 @@
+name: build and deploy
+run-name: ${{ github.actor }} started a deployment
+permissions:
+  contents: write
+  id-token: write
+  pages: write
+on: 
+  push:
+    branches: [ main ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v6
+    - run: curl -fsSL https://bun.sh/install | bash
+    - run: echo "PATH=$PATH:$HOME/.bun/bin" >> $GITHUB_ENV
+    - run: |
+        cd frontend
+        bun install
+        VITE_ROUTER_BASENAME=/dev-tools bun run -b build
+    - name: Upload static files as artifact
+      id: deployment
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: frontend/dist/
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,9 @@
+# .prettierrc.toml
+printWidth = 160
+tabWidth = 4
+trailingComma = "all"
+bracketSpacing = true
+bracketSameLine = false
+semi = true
+singleQuote = false
+endOfLine = "lf"

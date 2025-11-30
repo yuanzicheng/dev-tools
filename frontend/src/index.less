@@ -1,0 +1,51 @@
+body,
+html {
+    font-family: Inter, -apple-system, BlinkMacSystemFont, PingFang SC, Hiragino Sans GB, noto sans, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    background-color: var(--color-bg-1);
+    color: var(--color-text-1);
+    color-scheme: dark;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+    display: block;
+    min-height: 6px;
+    min-width: 6px;
+    border-radius: 6px;
+    background-color: rgb(var(--primary-2));
+
+    &:hover {
+        background-color: rgb(var(--primary-4));
+    }
+}
+
+.bg-theme {
+    background-color: var(--color-bg-5);
+}
+
+.text-theme {
+    color: var(--color-text-4);
+}
+
+.border-theme {
+    border-color: var(--color-neutral-3);
+}
+
+.text-primary {
+    color: rgb(var(--primary-6)) !important;
+}
+
+.bg-primary {
+    background-color: rgb(var(--primary-6)) !important;
+}
