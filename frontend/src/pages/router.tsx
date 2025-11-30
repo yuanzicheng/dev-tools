@@ -12,10 +12,12 @@ import { Index as Docs } from "~/pages/docs";
 import { Index as Login } from "~/pages/login";
 import { NotFound } from "./not-found";
 
+const basename = import.meta.env.VITE_ROUTER_BASENAME;
+
 export const Router = () => {
     return (
         <div className="w-screen h-screen overflow-y-hidden">
-            <BrowserRouter>
+            <BrowserRouter {...(basename ? { basename } : {})}>
                 <Routes>
                     <Route path="/" element={<Main />}>
                         <Route path="/" element={<Home />} />
