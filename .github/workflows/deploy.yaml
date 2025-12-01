@@ -17,7 +17,8 @@ jobs:
     - run: |
         cd frontend
         bun install
-        VITE_ROUTER_BASENAME=/dev-tools bun run -b build
+        bun run -b build
+        # VITE_ROUTER_BASENAME=/dev-tools bun run -b build
     - name: Upload static files as artifact
       id: deployment
       uses: actions/upload-pages-artifact@v3

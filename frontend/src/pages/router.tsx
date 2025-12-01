@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route, HashRouter } from "react-router-dom";
 import { Index as Main } from "~/pages/main";
 import { Index as Home } from "~/pages/home";
 import { Index as Datetime } from "~/pages/datetime";
@@ -17,7 +17,7 @@ const basename = import.meta.env.VITE_ROUTER_BASENAME;
 export const Router = () => {
     return (
         <div className="w-screen h-screen overflow-y-hidden">
-            <BrowserRouter {...(basename ? { basename } : {})}>
+            <HashRouter {...(basename ? { basename } : {})}>
                 <Routes>
                     <Route path="/" element={<Main />}>
                         <Route path="/" element={<Home />} />
@@ -33,7 +33,7 @@ export const Router = () => {
                     <Route path="/login" element={<Login />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
-            </BrowserRouter>
+            </HashRouter>
         </div>
     );
 };
