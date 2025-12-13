@@ -25,6 +25,7 @@ const menus: MenuItem[] = [
         text: "menu.crypto",
         icon: <IconLock />,
         children: [
+            { path: "/url", text: "menu.crypto.url" },
             { path: "/base64", text: "menu.crypto.base64" },
             { path: "/sha", text: "menu.crypto.sha" },
             { path: "/md5", text: "menu.crypto.md5" },

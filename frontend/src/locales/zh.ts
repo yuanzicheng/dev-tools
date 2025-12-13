@@ -11,6 +11,7 @@ export const message = {
     "menu.crypto.sha": "SHA",
     "menu.crypto.md5": "MD5",
     "menu.crypto.base64": "Base64",
+    "menu.crypto.url": "URL",
     "menu.json": "JSON",
     "menu.password": "密码",
     "menu.qrcode": "二维码",
