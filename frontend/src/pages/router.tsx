@@ -12,6 +12,7 @@ import { Index as QRCode } from "~/pages/qrcode";
 import { Index as Docs } from "~/pages/docs";
 import { Index as Login } from "~/pages/login";
 import { NotFound } from "./not-found";
+import { JWT } from "./crypto/jwt";
 
 const basename = import.meta.env.VITE_ROUTER_BASENAME;
 
@@ -29,6 +30,7 @@ export const Router = () => {
                         <Route path="/crypto/base64" element={<Base64 />} />
                         <Route path="/crypto/sha" element={<SHA />} />
                         <Route path="/crypto/md5" element={<MD5 />} />
+                        <Route path="/crypto/jwt" element={<JWT />} />
                         <Route path="/json" element={<Json />} />
                         <Route path="/docs" element={<Docs />} />
                     </Route>

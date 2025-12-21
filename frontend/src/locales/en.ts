@@ -10,6 +10,7 @@ export const message = {
     "menu.crypto": "Crypto",
     "menu.crypto.sha": "SHA",
     "menu.crypto.md5": "MD5",
+    "menu.crypto.jwt": "JWT",
     "menu.crypto.base64": "Base64",
     "menu.crypto.url": "URL",
     "menu.json": "JSON",

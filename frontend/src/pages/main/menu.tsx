@@ -29,6 +29,7 @@ const menus: MenuItem[] = [
             { path: "/base64", text: "menu.crypto.base64" },
             { path: "/sha", text: "menu.crypto.sha" },
             { path: "/md5", text: "menu.crypto.md5" },
+            { path: "/jwt", text: "menu.crypto.jwt" },
         ],
     },
     { path: "/password", text: "menu.password", icon: <IconThunderbolt /> },
