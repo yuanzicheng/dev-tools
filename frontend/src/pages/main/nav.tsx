@@ -9,6 +9,7 @@ export const Nav = ({ className }: { className?: string }) => {
     return (
         <Drawer
             className={`${className} nopadding`}
+            wrapClassName="safe-area"
             title={<Logo />}
             width={220}
             placement="left"

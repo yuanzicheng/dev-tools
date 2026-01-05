@@ -20,7 +20,8 @@ export const Settings = ({ className }: { className?: string }) => {
         <div className={className}>
             <Drawer
                 title={intl.formatMessage({ id: "settings" })}
-                className="<sm:w-9/10! sm:w-1/2! md:w-2/5! !lg:w-400px"
+                className="<sm:w-9/10! sm:w-1/2! md:w-2/5! !lg:w-400px h-full"
+                wrapClassName="!h-full safe-area"
                 visible={visible}
                 afterOpen={() => setVisible(true)}
                 afterClose={() => setVisible(false)}

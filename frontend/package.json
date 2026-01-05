@@ -13,6 +13,7 @@
     "@arco-design/color": "^0.4.0",
     "@arco-design/web-react": "^2.66.8",
     "@codemirror/lang-json": "^6.0.2",
+    "@tauri-apps/api": "^2.9.1",
     "@uiw/codemirror-theme-github": "^4.25.3",
     "@uiw/react-codemirror": "^4.25.3",
     "ahooks": "^3.9.6",
